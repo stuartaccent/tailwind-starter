@@ -1,0 +1,43 @@
+/* button */
+button {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--spacing);
+}
+
+/* role button is an inline element such as anchors */
+[role="button"] {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@mixin button {
+  --background-color: var(--primary);
+  --border-color: var(--primary);
+  --color: var(--primary-inverse);
+  --font-size: var(--font-size);
+  padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  outline: none;
+  background-color: var(--background-color);
+  color: var(--color);
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  text-align: center;
+  cursor: pointer;
+
+  &:is(:hover, :active, :focus) {
+    --background-color: var(--primary-hover);
+    --border-color: var(--primary-hover);
+  }
+}
+
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+[role="button"] {
+  @include button;
+}

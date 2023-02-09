@@ -1,0 +1,47 @@
+{
+  "name": "@stuartaccent/tailwind-starter",
+  "version": "1.0.0",
+  "description": "Tailwind Starter Project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stuartaccent/tailwind-starter"
+  },
+  "homepage": "https://github.com/stuartaccent/tailwind-starter",
+  "author": "Stuart George <stuart@accentdesign.co.uk>",
+  "keywords": [
+    "tailwind",
+    "css"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "watch:css": "nodemon --watch scss/ --ext scss --exec 'npm run build:scss'",
+
+    "build:scss": "npm-run-all css:compile css:prefix css:minify --silent",
+    "css:compile": "sass --load-path='./node_modules/' --style expanded --source-map --embed-sources --no-error-css scss/:css/",
+    "css:prefix": "postcss --config css --replace css/*.css css/*/*.css !css/*.min.css",
+    "css:minify": "cleancss -O1 --with-rebase --source-map --source-map-inline-sources --batch --batch-suffix .min css/*.css !css/*.min.css",
+
+    "scss:sorter": "postcss --config scss ./scss/**/*.scss --replace",
+    "scss:colors": "node scripts/get-colors.mjs"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.4.13",
+    "clean-css-cli": "5.6.2",
+    "css-declaration-sorter": "6.3.1",
+    "nodemon": "2.0.20",
+    "npm-run-all": "4.1.5",
+    "postcss": "8.4.21",
+    "postcss-cli": "10.1.0",
+    "postcss-import": "15.1.0",
+    "postcss-nesting": "11.1.0",
+    "postcss-scss": "4.0.6",
+    "sass": "1.58.0",
+    "tailwindcss": "3.2.4"
+  },
+  "browserslist": [
+    ">= 0.5%",
+    "last 2 major versions",
+    "not dead",
+    "not ie > 0"
+  ]
+}
