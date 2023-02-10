@@ -1,0 +1,71 @@
+@use "sass:color";
+@use "colors" as *;
+@use "../utils/functions";
+
+/* colors */
+:root {
+  /* document colors */
+  --background-color: #{color.scale($slate-900, $lightness: -10%)};
+
+  /* text colours */
+  --color: #{$zinc-200};
+
+  /* muted colors */
+  --muted-color: #{mix($zinc-500, $zinc-400)};
+  --muted-border-color: #{mix($slate-900, $slate-800)};
+
+  /* primary colors */
+  --primary: #{$sky-500};
+  --primary-hover: #{mix($sky-500, $sky-400)};
+  --primary-inverse: #{$white};
+
+  /* secondary colors */
+  --secondary: #{$slate-600};
+  --secondary-hover: #{mix($slate-600, $slate-500)};
+  --secondary-inverse: #{$white};
+
+  /* highlighted text (<mark>) */
+  --mark-background-color: #{$amber-100};
+  --mark-color: #{$amber-900};
+
+  /* inserted (<ins>) & deleted (<ins>) */
+  --ins-color: #{$green-700};
+  --del-color: #{$red-800};
+
+  /* blockquote colors */
+  --blockquote-border-color: var(--muted-border-color);
+  --blockquote-footer-color: var(--muted-color);
+
+  /* form elements */
+  --form-element-background-color: #{mix($slate-900, $slate-800, 25%)};
+  --form-element-border-color: #{$slate-800};
+  --form-element-color: #{$zinc-100};
+  --form-element-placeholder-color: var(--muted-color);
+  --form-element-disabled-background-color: var(--form-element-background-color);
+  --form-element-disabled-border-color: var(--form-element-border-color);
+  --form-element-disabled-opacity: theme('backgroundOpacity.50');
+
+  /* switch */
+  --switch-background-color: #{mix($slate-800, $slate-700)};
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+
+  /* table */
+  --table-border-color: var(--muted-border-color);
+  --table-row-stripped-background-color: #{rgba($zinc-500, 0.0375)};
+
+  /* accordion */
+  --accordion-border-color: var(--muted-border-color);
+
+  /* dialog */
+  --dialog-overlay-background-color: #{rgba(mix($black, $zinc-900), 0.85)};
+  --dialog-background-color: var(--background-color);
+  --dialog-border-color: var(--muted-border-color);
+  --dialog-sectionning-background-color: #{mix($slate-900, $slate-800, 25%)};
+
+  /* icons */
+  --icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-400)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --icon-chevron-button: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($white)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  --icon-checkbox: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($white)}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  --icon-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($white)}' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
+}
