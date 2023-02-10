@@ -35,9 +35,9 @@ button {
 }
 
 button,
-input[type="submit"],
-input[type="button"],
-input[type="reset"],
+[type="submit"],
+[type="button"],
+[type="reset"],
 [role="button"] {
   @include button;
 }

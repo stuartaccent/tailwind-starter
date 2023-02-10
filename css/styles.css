@@ -694,9 +694,9 @@ ul {
   display: inline-block;
   text-decoration: none;
 } button,
-input[type=submit],
-input[type=button],
-input[type=reset],
+[type=submit],
+[type=button],
+[type=reset],
 [role=button] {
   --background-color: var(--primary);
   --border-color: var(--primary);
@@ -714,9 +714,9 @@ input[type=reset],
   text-align: center;
   cursor: pointer;
 } button:is(:hover, :active, :focus),
-input[type=submit]:is(:hover, :active, :focus),
-input[type=button]:is(:hover, :active, :focus),
-input[type=reset]:is(:hover, :active, :focus),
+[type=submit]:is(:hover, :active, :focus),
+[type=button]:is(:hover, :active, :focus),
+[type=reset]:is(:hover, :active, :focus),
 [role=button]:is(:hover, :active, :focus) {
   --background-color: var(--primary-hover);
   --border-color: var(--primary-hover);
