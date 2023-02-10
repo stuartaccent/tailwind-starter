@@ -720,9 +720,9 @@ ul {
 [role=button]:is(:hover, :active, :focus) {
   --background-color: var(--primary-hover);
   --border-color: var(--primary-hover);
-} input:not([type=checkbox],
+} input:where(:not([type=checkbox],
 [type=radio],
-[type=range]) {
+[type=range])) {
   height: calc(1rem * var(--line-height) + var(--form-element-spacing-vertical) * 2 + var(--border-width) * 2);
 } fieldset {
   margin-bottom: var(--spacing);
@@ -731,14 +731,14 @@ fieldset legend {
   display: block;
   margin-bottom: calc(var(--spacing) * 0.25);
   font-weight: var(--form-label-font-weight);
-} /* blocks, 100% */ input:not([type=checkbox],
-[type=radio]),
+} /* blocks, 100% */ input:where(:not([type=checkbox],
+[type=radio])),
 select,
 textarea {
   width: 100%;
-} /* padding */ input:not([type=checkbox],
+} /* padding */ input:where(:not([type=checkbox],
 [type=radio],
-[type=range]),
+[type=range])),
 select,
 textarea {
   padding: var(--form-element-spacing-vertical) var(--form-element-spacing-horizontal);
@@ -758,8 +758,8 @@ textarea {
   background-color: var(--background-color);
   color: var(--color);
   font-weight: var(--font-weight);
-} select:not([multiple],
-[size]) {
+} select:where(:not([multiple],
+[size])) {
   padding-right: calc(var(--form-element-spacing-horizontal) + 1.5rem);
   padding-left: var(--form-element-spacing-horizontal);
   -webkit-padding-start: var(--form-element-spacing-horizontal);
@@ -777,16 +777,17 @@ textarea {
 textarea::placeholder {
   color: var(--form-element-placeholder-color);
   opacity: 1;
-} /* focus */ input:not([type=submit],
+} /* focus */ input:where(:not([type=submit],
 [type=button],
 [type=reset],
 [type=range],
-[readonly]):focus,
-:where(select, textarea):focus {
+[readonly])):focus,
+select:focus,
+textarea:focus {
   --border-color: var(--form-element-focus-border-color);
-} /* disabled */ input:not([type=submit],
+} /* disabled */ input:where(:not([type=submit],
 [type=button],
-[type=reset])[disabled],
+[type=reset]))[disabled],
 select[disabled],
 textarea[disabled] {
   --background-color: var(--form-element-disabled-background-color);

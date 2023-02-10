@@ -1,7 +1,9 @@
-input:not(
-  [type="checkbox"],
-  [type="radio"],
-  [type="range"]
+input:where(
+  :not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="range"]
+  )
 ) {
   height: calc(
           (1rem * var(--line-height)) + (var(--form-element-spacing-vertical) * 2) +
@@ -21,9 +23,11 @@ fieldset legend {
 }
 
 /* blocks, 100% */
-input:not(
-  [type="checkbox"],
-  [type="radio"]
+input:where(
+  :not(
+    [type="checkbox"],
+    [type="radio"]
+  )
 ),
 select,
 textarea {
@@ -31,10 +35,12 @@ textarea {
 }
 
 /* padding */
-input:not(
-  [type="checkbox"],
-  [type="radio"],
-  [type="range"]
+input:where(
+  :not(
+    [type="checkbox"],
+    [type="radio"],
+    [type="range"]
+  )
 ),
 select,
 textarea {
@@ -61,9 +67,11 @@ textarea {
   font-weight: var(--font-weight);
 }
 
-select:not(
-  [multiple],
-  [size]
+select:where(
+  :not(
+    [multiple],
+    [size]
+  )
 ) {
   padding-right: calc(var(--form-element-spacing-horizontal) + 1.5rem);
   padding-left: var(--form-element-spacing-horizontal);
@@ -83,24 +91,29 @@ textarea::placeholder {
 }
 
 /* focus */
-input:not(
-  [type="submit"],
-  [type="button"],
-  [type="reset"],
-  [type="range"],
-  [readonly]
+input:where(
+  :not(
+    [type="submit"],
+    [type="button"],
+    [type="reset"],
+    [type="range"],
+    [readonly]
+  )
 ),
-:where(select, textarea) {
+select,
+textarea {
   &:focus {
     --border-color: var(--form-element-focus-border-color);
   }
 }
 
 /* disabled */
-input:not(
-  [type="submit"],
-  [type="button"],
-  [type="reset"]
+input:where(
+  :not(
+    [type="submit"],
+    [type="button"],
+    [type="reset"]
+  )
 )[disabled],
 select[disabled],
 textarea[disabled] {
