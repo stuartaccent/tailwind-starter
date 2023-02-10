@@ -1,3 +1,5 @@
+@use "tailwindcss/base";
+
 @use "themes/styles";
 @use "themes/light";
 
@@ -10,5 +12,9 @@
 @use "content/checkbox-radio-switch";
 @use "content/table";
 
+@use "tailwindcss/components";
+
 @use "components/accordion";
 @use "components/dialog";
+
+@use "tailwindcss/utilities";
