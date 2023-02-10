@@ -82,8 +82,26 @@ textarea::placeholder {
   opacity: 1;
 }
 
+/* focus */
+input:not(
+  [type="submit"],
+  [type="button"],
+  [type="reset"],
+  [type="range"],
+  [readonly]
+),
+:where(select, textarea) {
+  &:focus {
+    --border-color: var(--form-element-focus-border-color);
+  }
+}
+
 /* disabled */
-input:not([type="submit"], [type="button"], [type="reset"])[disabled],
+input:not(
+  [type="submit"],
+  [type="button"],
+  [type="reset"]
+)[disabled],
 select[disabled],
 textarea[disabled] {
   --background-color: var(--form-element-disabled-background-color);

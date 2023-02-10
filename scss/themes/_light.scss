@@ -41,6 +41,7 @@
   --form-element-border-color: #{mix($slate-200, $slate-100)};
   --form-element-color: #{$zinc-800};
   --form-element-placeholder-color: var(--muted-color);
+  --form-element-focus-border-color: var(--primary);
   --form-element-disabled-background-color: var(--form-element-background-color);
   --form-element-disabled-border-color: var(--form-element-border-color);
   --form-element-disabled-opacity: theme('backgroundOpacity.50');

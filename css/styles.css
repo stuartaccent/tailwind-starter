@@ -83,6 +83,7 @@ h6 {
   --form-element-border-color: #eaeff5;
   --form-element-color: #27272a;
   --form-element-placeholder-color: var(--muted-color);
+  --form-element-focus-border-color: var(--primary);
   --form-element-disabled-background-color: var(--form-element-background-color);
   --form-element-disabled-border-color: var(--form-element-border-color);
   --form-element-disabled-opacity: 0.5;
@@ -321,8 +322,19 @@ textarea::placeholder {
   color: var(--form-element-placeholder-color);
   opacity: 1;
 }
+/* focus */
+input:not([type=submit],
+[type=button],
+[type=reset],
+[type=range],
+[readonly]):focus,
+:where(select, textarea):focus {
+  --border-color: var(--form-element-focus-border-color);
+}
 /* disabled */
-input:not([type=submit], [type=button], [type=reset])[disabled],
+input:not([type=submit],
+[type=button],
+[type=reset])[disabled],
 select[disabled],
 textarea[disabled] {
   --background-color: var(--form-element-disabled-background-color);
