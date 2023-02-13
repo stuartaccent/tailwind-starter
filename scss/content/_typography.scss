@@ -16,7 +16,9 @@ ul {
 }
 
 /* links */
-a:not([role="button"]),
+a:where(
+  :not([role="button"])
+),
 [role="link"] {
   --color: var(--primary);
   --background-color: transparent;

@@ -631,7 +631,7 @@ ul {
   color: var(--color);
   font-weight: var(--font-weight);
   font-size: var(--font-size);
-} /* links */ a:not([role=button]),
+} /* links */ a:where(:not([role=button])),
 [role=link] {
   --color: var(--primary);
   --background-color: transparent;
@@ -639,7 +639,7 @@ ul {
   color: var(--color);
   -webkit-text-decoration: var(--text-decoration);
           text-decoration: var(--text-decoration);
-} a:not([role=button]):is([aria-current], :hover, :active, :focus),
+} a:where(:not([role=button])):is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
   --color: var(--primary-hover);
   --text-decoration: underline;
