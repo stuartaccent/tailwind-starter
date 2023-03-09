@@ -1005,6 +1005,19 @@ dialog article > footer {
   border-bottom-left-radius: var(--border-radius);
 } dialog article p:last-of-type {
   margin: 0;
+} /* role="group" */ [role=group] {
+  display: flex;
+  align-items: center;
+} [role=group] > * {
+  width: initial;
+  margin-bottom: initial;
+} [role=group] > *:not(:last-child) {
+  border-top-right-radius: initial;
+  border-bottom-right-radius: initial;
+} [role=group] > *:not(:first-child) {
+  border-left: initial;
+  border-top-left-radius: initial;
+  border-bottom-left-radius: initial;
 } .relative {
   position: relative;
 } .my-6 {
@@ -1015,6 +1028,8 @@ dialog article > footer {
   margin-bottom: 2.5rem;
 } .mb-6 {
   margin-bottom: 1.5rem;
+} .mb-4 {
+  margin-bottom: 1rem;
 } .mr-auto {
   margin-right: auto;
 } .flex {

@@ -1,0 +1,22 @@
+/* role="group" */
+
+[role="group"] {
+  display: flex;
+  align-items: center;
+}
+
+[role="group"] > * {
+  width: initial;
+  margin-bottom: initial;
+}
+
+[role="group"] > *:not(:last-child) {
+  border-top-right-radius: initial;
+  border-bottom-right-radius: initial;
+}
+
+[role="group"] > *:not(:first-child) {
+  border-left: initial;
+  border-top-left-radius: initial;
+  border-bottom-left-radius: initial;
+}
