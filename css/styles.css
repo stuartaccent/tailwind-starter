@@ -1011,13 +1011,13 @@ dialog article > footer {
 } [role=group] > * {
   width: initial;
   margin-bottom: initial;
-} [role=group] > *:not(:last-child) {
-  border-top-right-radius: initial;
-  border-bottom-right-radius: initial;
-} [role=group] > *:not(:first-child) {
+} [role=group] > *:where(:not(:first-child)) {
   border-left: initial;
   border-top-left-radius: initial;
   border-bottom-left-radius: initial;
+} [role=group] > *:where(:not(:last-child)) {
+  border-top-right-radius: initial;
+  border-bottom-right-radius: initial;
 } .relative {
   position: relative;
 } .my-6 {
@@ -1038,8 +1038,12 @@ dialog article > footer {
   display: table;
 } .grid {
   display: grid;
+} .w-full {
+  width: 100%;
 } .max-w-2xl {
   max-width: 42rem;
+} .flex-grow {
+  flex-grow: 1;
 } .cursor-pointer {
   cursor: pointer;
 } .grid-cols-1 {
@@ -1050,6 +1054,12 @@ dialog article > footer {
   gap: 1rem;
 } .overflow-x-auto {
   overflow-x: auto;
+} .rounded-l-full {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+} .rounded-r-full {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
 } .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
