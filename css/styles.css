@@ -652,7 +652,7 @@ ul {
 } /* heading groups */ hgroup {
   margin-bottom: var(--typography-spacing-vertical);
 } hgroup > * {
-  margin-bottom: 0;
+  margin-bottom: initial;
 } hgroup > *:last-child {
   --color: var(--muted-color);
   --font-weight: unset;

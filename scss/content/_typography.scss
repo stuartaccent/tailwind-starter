@@ -46,7 +46,7 @@ hgroup {
   margin-bottom: var(--typography-spacing-vertical);
 
   > * {
-    margin-bottom: 0;
+    margin-bottom: initial;
   }
 
   > *:last-child {
