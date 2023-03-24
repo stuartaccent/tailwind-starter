@@ -28,7 +28,6 @@ a:where(
 
   &:is([aria-current], :hover, :active, :focus) {
     --color: var(--primary-hover);
-    --text-decoration: underline;
   }
 }
 

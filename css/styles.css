@@ -642,7 +642,6 @@ ul {
 } a:where(:not([role=button])):is([aria-current], :hover, :active, :focus),
 [role=link]:is([aria-current], :hover, :active, :focus) {
   --color: var(--primary-hover);
-  --text-decoration: underline;
 } /* headings */ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--typography-spacing-vertical);
   color: var(--color);
